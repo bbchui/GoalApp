@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% if flash[:errors] %>
+      <p> <%= flash[:errors] %> </p>
+    <% end %>
+    <br>
+    
     <%= yield %>
   </body>
 </html>
