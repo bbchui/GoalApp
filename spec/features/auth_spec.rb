@@ -48,7 +48,7 @@ feature "logging out" do
     fill_in "Password", with: "password"
     click_on "sign in"
     click_on "Sign Out"
-    end
+  end
 
   scenario "begins with a logged out state" do
     expect(page).to have_content "Sign In"

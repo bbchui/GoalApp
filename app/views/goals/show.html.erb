@@ -1,0 +1,11 @@
+<h1>Goals!</h1>
+
+<%= @goal.title %>
+<br>
+<%= @goal.finished %>
+<br>
+<% if @goal.finished == "Ongoing" %>
+  <%= button_to "Mark Complete", goal_url(@goal), method: :patch%>
+<% else %>
+  <%= button_to "Mark Ongoing", goal_url(@goal), method: :patch%>
+<% end %>
